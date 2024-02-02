@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum</title>
+</head>
+<body>
+    <header>
+        <h2>FORMULARIO 4. CONTRATOS EJECUTADOS</h2>
+        <p>Diligencia este formulario por cada contrato a reportar</p>
+    </header>
+    <main>
+        <form action="localhost" method="get">
+            <fieldset>
+                <table style="border: 0;">
+                    <tr>
+                        <td>
+                            <b>Tipo de Registro</b>
+                        </td>
+                        <td colspan="2">
+                            <label for="regis">Registro Liviano</label>
+                            <input type="checkbox" id="regis" name="reliv" tabindex="1">
+                        </td>
+                        <td colspan="2">
+                            <label for="re_int">Registro Integral</label>
+                            <input type="checkbox" id="re_int" name="reint" tabindex="2">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b>Tipo de Trámite</b>
+                        </td>
+                        <td>
+                            <label for="inscrip">Incripción</label>
+                            <input type="checkbox" name="registro" id="inscrip" tabindex="3">
+                        </td>
+                        <td>
+                            <label for="renov">Renovación</label>
+                            <input type="checkbox" name="renovacion" id="renov" tabindex="4">
+                        </td>
+                        <td>
+                            <label for="Actu">Actualización</label>
+                            <input type="checkbox" name="actua1" id="Actu" tabindex="5">
+                        </td>
+                        <td>
+                            <label for="cancel">Cancelación</label>
+                            <input type="checkbox" name="cancel01" id="cancel" tabindex="6">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">
+                            <h2>SOLO PERSONA JURIDICA</h2>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="nit">N.I.T</label>
+                            <input type="number" name="nit01" id="nit" min="1" tabindex="7">
+                        </td>
+                        <td colspan="4">
+                            <label for="razsol">Razon Social</label>
+                            <input type="text" name="razonsocial1" id="razsol" tabindex="8" maxlength="100">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">
+                            <h2>SÓLO PERSONA NATURAL</h2>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="priape">Primer Apellido</label>
+                        </td>
+                        <td>
+                            <label for="segap1">Segundo Apellido</label>
+                        </td>
+                        <td colspan="3">
+                            <label for="nombresper">Nombres</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" id="priape" name="apellido01" maxlength="20" tabindex="9">
+                        </td>
+                        <td>
+                            <input type="text" name="apellido02" id="segap1" tabindex="10" maxlength="20">
+                        </td>
+                        <td colspan="3">
+                            <input type="text" name="nombres01" id="nombresper" tabindex="11">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h2>INFORMACIÓN DEL CONTRATO</h2>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="namecontra">Nombre de la Entidad Contratante</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" name="namecontra01" id="namecontra" maxlength="100" tabindex="12">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h2>CONTRATO</h2>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="ndcontra">No. del contrato</label>
+                        </td>
+                        <td colspan="2">
+                            <label for="smmlv">Valor del contrato en SMMLV a la fecha de terminacion</label>
+                        </td>
+                        <td>
+                            <label for="fechainicio">Fecha de inicio</label>
+                        </td>
+                        <td>
+                            <label for="fechatermina">
+                                Fecha de terminación
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="number" name="ncontrato01" id="ndcontra" min="0" tabindex="13">
+                        </td>
+                        <td colspan="2">
+                            <input type="number" name="datetermina" id="smmlv" tabindex="14" min="0">
+                        </td>
+                        <td>
+                            <input type="date" name="fechainicio01" id="fechainicio" tabindex="15">
+                        </td>
+                        <td>
+                            <input type="date" name="fechatermina01" id="fechatermina" tabindex="16">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>¿El contrato tuvo adiciones?</label>
+                        </td>
+                        <td>
+                            <label for="si">SI</label>
+                        </td>
+                        <td>
+                            <input type="radio" name="si01" id="si" tabindex="17">
+                        </td>
+                        <td>
+                            <label for="no">NO</label>
+                        </td>
+                        <td>
+                            <input type="text" name="no01" id="no" tabindex="18">
+                        </td>
+
+                        <td>
+                            <p>Si su respuesta es afirmativa, indique el valor de la adicion en la siguiete casilla de lo cintrario dejela vacia.</p>
+                        </td>
+                        <td>
+                            <label for="smmlv2"></label>
+                            <input type="number" name="smmlv02" id="smmlv2" min="0" tabindex="19">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <p>De acuerdo a las clasificaciones (Anexo 1: contrcutor, proveerdor o sonsultor), codifique el objetivo del contrato, indique las actividades dentro del cual se haya ejecutado</p>
+                        </td>
+                        <td>
+                            <select name="selecmulti01" id="" multiple size="3">
+
+                                <option value="1"> Contructor</option>
+                                <option value="2">Proveedor</option>
+                                <option value="3">Consultor</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <h2>Objetivo del Contraro y sus modificaciones</h2>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">
+                            <textarea name="objetocontraro" id="objetocon" cols="50" rows="20" tabindex="19" placeholder="Pon texto aca"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Datos de contacto del contratante</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="nomapell">Nombres y Apellidos del Contacto</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" name="nombesyapllidos" id="nomapell" placeholder="pon tus nombres y apellidos" tabindex="20">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="tell"> Telefono Fijo</label>
+                        </td>
+                        <td>
+                            <label for="Tellcell"Telefono Celular></label>
+                        </td>
+                        <td>
+                            <label for="email">Direccion de correo Electronico</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="tel" name="telfij" id="tell" tabindex="21">
+                        </td>
+                        <td>
+                            <input type="tel" name="telcell1" id="Tellcell" tabindex="22">
+                        </td>
+                        <td>
+                            <input type="email" name="email01" id="email">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="submit" value="submit">
+                        </td>
+                        <td>
+                            <input type="reset" value="reset" name="" id="">
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+        </form>
+
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
