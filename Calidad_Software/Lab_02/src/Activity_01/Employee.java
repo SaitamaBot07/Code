@@ -1,4 +1,4 @@
-package Class;
+package Activity_01;
 
 public class Employee {
     private String name;
