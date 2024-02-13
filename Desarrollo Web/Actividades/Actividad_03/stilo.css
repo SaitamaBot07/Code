@@ -42,14 +42,26 @@ body{
     height: 30%;
 }
 
-.main_table_tbody_tr > td {
+.main_table_tbody  td {
     width: 20%;
 }
 
-.main_table_tbody_tr td > button{
+.main_table_tbody button{
     width: 100%;
     height: 100%;
     background-color: #2F2E2E;
     border: none;
     font-size: 15px;
+}
+
+.main_table_tbody button:hover{
+    outline: solid 1px white;
+}
+
+.main_table_tbody_tr_gray button{
+    background-color: gray;
+}
+
+.button_black button{
+    background-color: #2F2E2E;
 }
