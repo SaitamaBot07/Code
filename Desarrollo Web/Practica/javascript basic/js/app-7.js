@@ -1,8 +1,8 @@
-let element;
+let element; //debes tener en cuenta que todo va e la RAM y se comunica comn el DOOM 
 
-// element = document;
+//element = document; //document es el DOOM
 // element = document.all;
-// element = document.head;
+element = document.head;
 // element = document.body;
 // element = document.domain;
 // element = document.forms;
@@ -11,6 +11,9 @@ let element;
 // element = document.forms[0].method;
 // element = document.forms[0].classList;
 // element = document.forms[0].action;
+
+
+// de esta manera nos traemos elemntos del DOOM al java }
 
 // element = document.links;
 // element = document.links[4];

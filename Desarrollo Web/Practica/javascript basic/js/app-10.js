@@ -6,11 +6,14 @@ headaer.style.backgroundColor = 'red';
 headaer.style.fontFamily = 'Arial';
 headaer.style.textTransform = 'uppercase';
 
+*! Asi cambia los estilos
 
 const card = document.querySelector('.card');
 card.classList.add('new-class', 'onew-class');
 card.classList.remove('card');
 console.log(card.classList);
+
+*! Asi se agregan nuevos estilos
 
 const navBar = document.querySelector('.navbar');
 console.log(navBar);

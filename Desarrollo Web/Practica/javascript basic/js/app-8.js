@@ -18,6 +18,8 @@ console.log(form);
 const form_does_not_exist = document.getElementById("form-does-not-exist");
 console.log(form_does_not_exist);
 
+// *! Con esto podemos buscar un elemento por ID sin traer toodo el arbol, Todos los arreglos en Js son dinamicos
+
 // querySelector css
 
 // solo el primero
@@ -28,7 +30,7 @@ console.log(card);
 const nav_item1 = document.querySelector(".collapse .nav-item");
 console.log(nav_item1);
 
-//seleccionar el segundo
+//seleccionar el segundo hijo
 const nav_item2 = document.querySelector(".collapse .nav-item:nth-child(2)");
 console.log(nav_item2);
 
