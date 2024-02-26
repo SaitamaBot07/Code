@@ -10,93 +10,93 @@
     <main class="main">
         <table class="main_table">
             <tbody class="main_table_tbody">
-                <tr class="main_table_tbody_tr" id="primertr">
+                <tr>
                     <td colspan="4">
-                        <input readonly type="text" name="result" id="resultNumber" value="0" step="0.01">
+                        <input readonly type="text" name="result" id="resultNumber" value="0">
                     </td>
                 </tr>
-                <tr>
+                <tr class="main_table_tbody_tr">
                     <td>
-                        <button>%</button>
+                        <button onclick="operationDisplay('porcentage')">%</button>
                     </td>
                     <td>
-                        <button>CE</button>
+                        <button onclick="clearDisplay()" >CE</button>
                     </td>
                     <td>
-                        <button onclick="limpiar()">C</button>
+                        <button onclick="clearMemory()">C</button>
                     </td>
                     <td>
-                        <button>back</button>
+                        <button onclick="backKeyDisplay()">back</button>
                     </td>
                 </tr>
-                <tr>
+                <tr class="main_table_tbody_tr">
                     <td>
-                        <button>1/x</button>
+                        <button onclick="operationDisplay('inversa')">1/x</button>
                     </td>
                     <td>
-                        <button>x^2</button>
+                        <button onclick="operationDisplay('potencia')">x^2</button>
                     </td>
                     <td>
-                        <button>sqrt</button>
+                        <button onclick="operationDisplay('raiz')">sqrt</button>
                     </td>
                     <td>
-                        <button>/</button>
+                        <button onclick="operationDisplay('division')">/</button>
                     </td>
                 </tr>
-                <tr class="main_table_tbody_tr_gray">
+                <tr class="main_table_tbody_tr">
                     <td>
-                        <button onclick="addKeyDisplay('7')">7</button>
+                        <button onclick="addKeyDisplay(7)">7</button>
                     </td>
                     <td>
-                        <button onclick="addKeyDisplay('8')">8</button>
+                        <button onclick="addKeyDisplay(8)">8</button>
                     </td>
                     <td>
-                        <button onclick="addKeyDisplay('9')" >9</button>
+                        <button onclick="addKeyDisplay(9)" >9</button>
                     </td>
-                    <td class="button_black">
-                        <button>x</button>
+                    <td>
+                        <button onclick="operationDisplay('multi')">x</button>
                     </td>
                 </tr>
-                <tr class="main_table_tbody_tr_gray">
+                <tr class="main_table_tbody_tr">
                     <td>
-                        <button onclick="addKeyDisplay('4')">4</button>
+                        <button onclick="addKeyDisplay(4)">4</button>
                     </td>
                     <td>
-                        <button onclick="addKeyDisplay('5')">5</button>
+                        <button onclick="addKeyDisplay(5)">5</button>
                     </td>
                     <td>
-                        <button onclick="addKeyDisplay('6')">6</button>
+                        <button onclick="addKeyDisplay(6)">6</button>
                     </td>
-                    <td class="button_black">
-                        <button>-</button>
+                    <td>
+                        <button onclick="operationDisplay('resta')">-</button>
                     </td>
                 </tr>
-                <tr class="main_table_tbody_tr_gray">
+                <tr class="main_table_tbody_tr">
                     <td>
-                        <button onclick="addKeyDisplay('1')">1</button>
+                        <button onclick="addKeyDisplay(1)">1</button>
                     </td>
                     <td>
-                        <button onclick="addKeyDisplay('2')">2</button>
+                        <button onclick="addKeyDisplay(2)">2</button>
                     </td>
                     <td>
-                        <button onclick="addKeyDisplay('3')">3</button>
+                        <button onclick="addKeyDisplay(3)">3</button>
                     </td>
-                    <td class="button_black">
-                        <button>+</button>
+                    <td>
+                        <button onclick="operationDisplay('suma')">+</button>
                     </td>
                 </tr>
-                <tr class="main_table_tbody_tr_gray">
+                <tr class="main_table_tbody_tr">
                     <td>
-                        <button>+/-</button>
+                        <button onclick="addKeyDisplay('signo')">+/-</button>
                     </td>
                     <td>
-                        <button onclick="addKeyDisplay('0')">0</button>
+                        <button onclick="addKeyDisplay(0)">0</button>
                     </td>
                     <td>
                         <button onclick="addKeyDisplay('.')">.</button>
                     </td>
-                    <td class="button_black">
-                        <button>=</button>
+                    <td>
+                        <button onclick="operationDisplay('igual')">=</button>
                     </td>
                 </tr>
             </tbody>
