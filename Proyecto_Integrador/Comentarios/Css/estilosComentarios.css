@@ -11,44 +11,37 @@
     --color-10: #18233F;
 }
 
-html {
+.comentarios_container {
     box-sizing: border-box;
 }
   *, *::before, *::after {
     box-sizing: inherit;
 }
 
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    font-family: 'Segoe UI';
-}
 
-.main {
+.comentarios_container {
     width: 715px;
     padding: 10px;
     border: 1px solid gray;
 }
 
-.main > h1 {
+.comentarios_container > h1 {
     margin: 0px;
     width: 100%;
     border-top: 1px solid #DEDEDE;
 }
 
-.main_section01 {
+.comentarios_container_section01 {
     background-color: #DEDEDE;
     padding: 10px;
 }
 
-.main_section01_form {
+.comentarios_container_section01_form {
     display: flex;
     flex-wrap: wrap;
 }
 
-.main_section01_form > textarea {
+.comentarios_container_section01_form > textarea {
     height: 50px;
     width: 100%;
     resize: none;
@@ -62,7 +55,7 @@ body {
     height: 0;
 }
 
-.main_section01_form  input, .main_section01_form label{
+.comentarios_container_section01_form  input, .comentarios_container_section01_form label{
     height: 30px;
     padding: 5px;
     border-radius: 5px;
@@ -76,28 +69,28 @@ body {
 }
 
 
-.main_section02_article {
+.comentarios_container_section02_article {
     padding: 10px;
     border-bottom: 1px solid #DEDEDE;
 }
 
-.main_section02_article p{
+.comentarios_container_section02_article p{
     margin: 0;
 }
 
 
-.main_section02_article div:first-child{
+.comentarios_container_section02_article div:first-child{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.main_section02_article_figure {
+.comentarios_container_section02_article_figure {
     display: flex;
     justify-content: center;
 }
 
-.main_section02_article_figure img {
+.comentarios_container_section02_article_figure img {
     height: auto;
-    width: 80%;
+    width: 25%;
 }
