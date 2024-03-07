@@ -1,0 +1,128 @@
+html {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  *, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body{
+  height: 777px;
+  width: 876px;
+  margin: 10px;
+  background-color: black;
+}
+
+.header_nav_ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0px 10px 0px;
+  padding: 0;
+}
+
+.header_nav_ul > li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FCCA1F;
+  border-radius: 5px;
+  height: 36px;
+  padding: 3px;
+}
+
+#header_nav_ul_IMDb,
+#header_nav_ul_login{
+  width: 80px;
+}
+
+#header_nav_ul_login  > p{
+  margin: 0px 3px 0px 3px;
+}
+
+#header_nav_ul_search {
+  width: 60%;
+  background-color: white;
+}
+
+#header_nav_ul_search > input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  border-right: #FCCA1F 2px solid ;
+  padding: 5px;
+}
+#header_nav_ul_search > svg {
+  margin: 0px 5px 0px 5px;
+}
+
+
+.main {
+  background-color: white;
+  padding: 20px 15px 20px 15px;
+}
+
+.main > h1{
+  border-left: #FCCA1F 5px solid;
+  padding-left: 10px;
+}
+
+.main > p {
+  font-size: 13.5px;
+  color: gray;
+}
+
+.main_section {
+  border: #DEDEDE 1px solid;
+  border-radius: 5px;
+  padding: 15px 20px 15px 20px;
+}
+
+.main_section_article  p{
+  font-size: 13.5px;
+}
+
+.main_section_article{
+  border-bottom: grey 1px solid;
+  margin-bottom: 10px;
+}
+
+
+.main_section_article_figure {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px;
+}
+
+.main_section_article_figure > img{
+  width: 100px;
+  margin-right: 10px;
+}
+
+.main_section_article_figure span > p:nth-last-child(2){
+  margin-top: 0;
+}
+.main_section_article_figure span > h5 {
+  margin-bottom: 5px;
+}
+
+@media (0px <= width <= 700px) {
+
+  .header_nav_ul{
+      display: flex;
+      flex-direction: column;
+  }
+
+  .header_nav_ul > li {
+      margin: 3px 0px 3px 0px;
+  }
+
+  #header_nav_ul_search,
+  #header_nav_ul_login{
+  width: 100%;
+}
+}
