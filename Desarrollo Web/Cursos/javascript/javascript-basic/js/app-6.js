@@ -15,8 +15,28 @@ for (let index = 0; index < meses.length; index++) {
 
 console.log(...meses); //! este operador recorre cada argumento del array
 
+const suma = (a,b) => a + b;
+let numbers = [1,2]
+
+console.log(suma(...numbers)) //* tambien le pondemos pasar argumentos a una función de una manera mas facil.
+
 const bag  = [];
 console.log(typeof bag)
+
+// todo: Otro ejemplo uniendo arreglos
+
+const semana1 = ['lunes', 'martes', 'miercoles']
+const semana2 = ['jueves', 'viernes']
+
+console.log(semana1.concat(semana2))
+//* esto concatena los arreglos pero tambien los podemos hacer con el operador agregandolo al mismo areglo
+
+const semana3 = [...semana1, ...semana2];
+
+console.log(semana3)
+
+//* Ahora con objetos
+
 
 const producto1 = {
     name: "Moinitor Asus",
@@ -33,6 +53,7 @@ const producto3 = {
     precio: 50,
 }
 
+//* esto es para agregar objetos a un array
 let resultado = [...bag, producto1];
 console.table(resultado);
 
@@ -42,6 +63,26 @@ resultado = [producto3, ...resultado];
 
 console.table(resultado);
 
+//* otro objeto en vez de un array
+
+const samir = {
+    sam: 'sam',
+    jo: 'joseph',
+}
+
+const london = {
+    london: 'london',
+}
+
+const shamir = {
+    ...samir,
+    ...london,
+}
+
+console.table(shamir)
+
+
+//* esto es un array que contiene objetos
 const shopcar = [
     { nombre: 'Monitor HP', precio: 700},
     { nombre: 'Televisión LG', precio: 1200},
@@ -51,30 +92,55 @@ const shopcar = [
     { nombre: 'Celular Iphone', precio: 18000},
 ];
 
-for (let index = 0; index < shopcar.length; index++) {
-    console.log(shopcar[index]);
+console.log(shopcar.length + 'pai')
+
+
+//* Manera clasica
+for (let i = 0; i < shopcar.length; i++) {
+    console.log(shopcar[i]);
+}
+console.log('--------------------')
+//*aca se le asigna el valor del iterable a la variable, por eso se imprime i
+for (const i of shopcar) {
+    console.log(i); 
 }
 
-for (let index of shopcar) {
-    console.log(shopcar[index]);
+for (const i of shopcar) {
+    console.log(i.nombre); 
 }
 
-for (let itemcar in shopcar) {
-    console.log(itemcar);
+//! solo funciona en arrays, mapas, conjuntos, pero no objetos
+console.log('--------------------')
+//* 
+for (const itemcar in shopcar) {
+    const shopcar1 = shopcar[itemcar]
+    console.log(shopcar1)
+    console.log(shopcar1.nombre + ' '+ shopcar1.precio);
 }
 
-const nfor = shopcar.forEach((producto) => {
-    return (`${producto.nombre} - Precio: ${producto.precio}`);
+const objeto = { a: 1, b: 2, c: 3 };
+for (const key in objeto) {
+    console.log(`${key}: ${objeto[key]}`);
+}
+
+//! Lo que pasa es que en un array el in itera sobre los indices, en un obejto itera sobre sus propiedades
+console.log('--------------------')
+shopcar.forEach((producto) => {
+    console.log(`${producto.nombre} - Precio: ${producto.precio}`);
 });
 
+//* El .map lo ue hace es crear un nuevo array, tal cual como un slice
+console.log('--------------------')
 const nmap = shopcar.map((producto) => {
     return (`${producto.nombre} - Precio: ${producto.precio}`);
 });
-
+console.log('--------------------')
 
 console.log(nmap);
-console.log(nfor);
+console.log(typeof nmap)
 
+
+//* Objeto dentro de otro objeto
 
 const item = {
     nombre: "Monitor lg 27'",
