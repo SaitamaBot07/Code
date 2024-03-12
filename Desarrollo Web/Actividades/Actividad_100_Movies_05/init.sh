@@ -1,4 +1,4 @@
 npm init -y
 npm i typescript 
-npm i ts-standard -D
-tsc --init
+npm install ts-standard -D
+npx tsc --init
