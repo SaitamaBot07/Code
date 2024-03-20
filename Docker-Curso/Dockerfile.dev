@@ -1,0 +1,13 @@
+FROM node:18
+#Imagen en la que se basa
+
+RUN npm i -g nodemon
+RUN mkdir -p /home/app 
+#Esto es una ruta dentro del mismo contenedor
+
+WORKDIR /home/app
+
+
+EXPOSE 3000
+
+CMD ["nodemon", "index.js"]
