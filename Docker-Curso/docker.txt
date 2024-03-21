@@ -1,0 +1,82 @@
+docker pull node | Descarga la ultima imagen de node disponinles
+
+docker pull node:18 | especificamos que es la version 18
+
+docker images | muestra las imagenes que hemos descargado
+
+image rm node:18 | elimina las imagenes
+
+docker container create mongo | creamos un contenedor a base de otra imagen
+
+docker start (id) | asi iniciamos un docker, podemos usar el id corto
+
+docker ps | muestra los contenedores que tenemos en ejecucion
+
+docker stop (id)
+
+docker ps -a | enseña todos los contendores creados esten en ejecucion o no
+
+docker rm (name resultado de ps -a) | eliminara el contenedor por nombre
+
+docker create container --name monguito mongo | creamos un contenedor con un nombre, y con ello podremos usarlo para iniciarlo.
+
+docker start monguito
+
+docker create -p27017:27017 --name monguito mongo  | de esta manera mapeamos del host al contenedor el puerto que queremos, el primero es del host, luego es del container
+
+
+docker logs monguito | mostrar logs de un container
+
+docker logs --follow monguito | se queda escuchando en los logs
+
+
+docker run -d mongo | si no esta la imagen la descarga, crea un contenedor y lo inicia, el -d es para que no muestre los logs
+
+docker run --name monguito -p27017:27017 -d mongo
+
+docker create -p 27017:27017 --name monguito -e MONGO_INITDB_ROOT_USERNAME=nico -e MONG
+O_INITDB_ROOT_PASSWORD=password mongo  | de esta manera crear un contenedor de mongo con ciertas variables de entorno
+
+
+Y poder conectarse al contenedor desde tal puerto
+
+Si queremos comunicar varios contenedores debemos crear una red para los dockers, para ellos usamos
+
+docker network ls 
+
+docker network create mired
+
+docker network rm mired
+
+Vale, ahora para crear la imagen de mi aplicación debemos hacer lo siguiente.
+
+docker build -t miapp:latest .
+
+ahora bien para que el contenedor este dentro de la red debemos ahcerlo al crearlo.
+
+docker create -p 27017:27017 --name monguito --network mired -e MONGO_INITDB_ROOT_USERNAME=nico -e MONGO_INITDB_ROOT_PASSWORD=password mongo
+
+no olvidemos crear el xontenedor de la imagen del codigo que creamos y agregarlo a la misma red
+
+docker create -p 3000:3000 --name chanchito --network mired miapp:1
+
+
+vale si te das cuenta es un trabajo tedioso, pero con docker compose es mucho mas facil
+
+docker compose up 
+
+asi se crea la imagen que necesite o los contenedores y si queremos bajarlo podemos hacer 
+
+docker compose down
+
+
+todos los datos se borran si se recrean imagenes, para ello debemos hacer volumenes.
+
+Anonimo: solo indica la ruta
+de anfitricion o host:
+Nombrado
+
+para crear un entorno que se actuliza constantemente
+docker compose -f docker-compose-dev.yml up
+
+
