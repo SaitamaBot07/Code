@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  images:
+    image: davopaco/nginx_images:latest
+    ports:
+      - "8080:443"
+  views:
+    image: davopaco/views:latest
+    ports:
+      - "443:3000"
