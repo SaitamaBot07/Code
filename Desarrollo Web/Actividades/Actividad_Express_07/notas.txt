@@ -1,0 +1,16 @@
+la ruta es un concepto diferente al normal, pues estamos al lado del servidor 
+
+las Rutas son las vistas pues esta escuchando al exterior y busca un objeto que resuelva tal solicitud 
+
+un endpoint
+
+LECTURAS QUE DEBO HACER
+Buenas practicas para entregar un endpoint
+
+Un endpoint no debe poner la accion que hace si no que el recurso que se va a entregar, no debe terminar con una acción 
+
+Existen muchas maneras automatizadas de gestionar las rutas y documentarlas
+
+cuando alguien va usar una API debe saber como se usa, o que entrega. Cual es path, cual es el recurso
+
+Swagger - Investigar 
