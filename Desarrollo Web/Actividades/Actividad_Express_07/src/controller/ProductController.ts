@@ -1,5 +1,6 @@
 import { Request, Response } from 'express'
 import ProductModel from '../model/ProductModel'
+import path from 'path'
 
 export default class ProductController {
 
@@ -25,7 +26,7 @@ export default class ProductController {
             const isProduct = this.productModel.findId(id)
             isProduct.then((isProduct) => {
                 if(isProduct) {
-                    res.status(200).sendFile(`${__dirname}/../assets/${id}.jpg`)
+                    res.status(200).sendFile(path.resolve(`${__dirname}/../assets/${id}.jpg`))
                 } else {
                     res.status(404).json({error: 'Product image not found'})
                 }
