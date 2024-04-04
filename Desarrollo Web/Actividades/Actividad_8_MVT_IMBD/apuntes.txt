@@ -1,0 +1,17 @@
+Hay dos maneras de hacer aplicaciones,
+
+una en la que El servidor ofrece una API y un cliente consume esa API, un SPA, donde la carga del render de la pagina esta del lado del cliente
+
+Las SPA normalmente son los dispositivos moviles, donde consultan información y ellas mismas dibujan 
+
+Hay SPA completas o SPA lazzy, lazzy son esas que cargan poco a poco los recursos segun se necesiten.
+
+
+Luego estan las paginas dinamicas, donde toda la carga del render esta a cargo del render, y se entrega como una hoja impresa al cliente,
+
+
+el cors en el json es para ignorar la advertencia de hablarnos a nosotros mismos.
+
+el ejs es para crear los template y poder hacer una pagina dinamica.
+
+en el MVT no hay controladores, los controladores estan en la misma vista, pero ademas ser capaz de llamar a los template para dar una respuesta 

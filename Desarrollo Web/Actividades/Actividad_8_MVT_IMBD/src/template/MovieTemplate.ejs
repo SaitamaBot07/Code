@@ -1,0 +1,13 @@
+<article class="main_section_article">
+    <figure class="main_section_article_figure">
+        <img src="<%=movie.image%>" alt="<%=movie.title%>">
+        <span>
+            <h5><%=movie.rank%>. <%=movie.title%></h5>
+            <p><%=movie.rank%> <%=(movie.genre != null) ? movie.genre[0] : ' '%></p>
+            <p># <%=movie.rating%></p>
+        </span>
+    </figure>
+    <p>
+        <%=movie.description%>
+    </p>
+</article>
