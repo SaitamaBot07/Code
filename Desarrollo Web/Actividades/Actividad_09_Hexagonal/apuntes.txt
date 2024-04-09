@@ -1,0 +1,38 @@
+Arquitectura limpia, en la que nos enfocaremos en la arquitecura hexafgonal, cebolla 
+
+QUIZ
+MVC o MVT
+
+
+SIstema autentificador de usuarios 
+
+Por medio de una aplicación o app se envian las credenciales.
+
+Todas las entidades o reglas de negocio se encontraran aislados en la region de "entidades", Pues debe estar complemente aislado de la tecnologia
+
+ENTIDADES = DOMINIO 
+
+Ejemplo del procedimiento almacenado de oracle
+
+Los Use Cases o Aplicación, ha de aclarar que aplicacion no se refiere al programa, estas son las entiendades, Atacar esta en la Use Cases
+
+
+TODO ESTO ES INFRAESTRUCTURA
+Controllers, gateways, Presenters, Aca se encuentran las interfaces que son contratos, pero estas necesitan un objeto que implementen esa funcionalidad, llamado adaptador. Las interfaces ayudan a comunicacion entre la capa 7 y 8. Pues la interface es para desacoplar cosas. Los adaptadores es el unico que puede hablar con la aplicacion y la infraestructura
+
+Devices, Web, UI, External Interfaces, DB  Es mera infraestructura, que son las tecnologias como Express, Node js, ejs, granql, etc.
+
+
+Caso de uso = Requerimiento funcional que responde solicitudes
+
+Servicio = Requerimient no funcional que envia solicitudes
+
+
+--------------------------
+En la arquitecura hexagonal, se deben dividir en varios "hexagonos" dependiendo de la funcionalidad, donde la Infraestructura puede comunicarse entre si, pero tambien los Dominios pueden comunicarse entre dominios
+
+
+Para conectar infraestructura con la aplicacion es por medio de los puertos, Elexpress controller consume la interfaz, pues solo hace una inyección
+
+
+En este caso el caso de uso necesita un servicio 
