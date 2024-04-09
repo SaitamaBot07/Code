@@ -36,3 +36,6 @@ Para conectar infraestructura con la aplicacion es por medio de los puertos, Ele
 
 
 En este caso el caso de uso necesita un servicio 
+
+Las abstracciones siempre van en el Dominio
+En la aplicacion van los casos de uso y servicios
