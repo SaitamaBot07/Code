@@ -39,3 +39,15 @@ En este caso el caso de uso necesita un servicio
 
 Las abstracciones siempre van en el Dominio
 En la aplicacion van los casos de uso y servicios
+
+--------------------------------------------
+
+Una fachada que es? 
+
+Tpos de puertos
+
+Driven puerto = va a afuera
+
+driver puerto = va pa adentro
+
+La parte mala de la arquitectura hexagonal es el nivel alto administrativo, pues se deben definir muchas cosas como la nomenclatura 
